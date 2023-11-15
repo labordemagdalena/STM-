@@ -1,0 +1,75 @@
+
+/*ESTILOS PARA index.html*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiado a min-height para asegurar el contenido se ajusta en pantallas pequeñas */
+    background-color: #8a2be2;
+}
+
+.maxcontainer {
+    width: 500px; /* Puedes ajustar este valor según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Cambiado a un valor máximo para evitar que el contenedor sea demasiado ancho en pantallas grandes */
+    width: auto; /* Ajustado el ancho para ser el 90% del contenedor padre */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.registration-container {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+label, input {
+    margin-bottom: 10px;
+    width: 100%; /* Ajustado el ancho al 100% para que los campos de entrada ocupen todo el ancho disponible */
+    
+}
+
+button {
+    background-color: #8a2be2;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%; /* Ajustado el ancho al 100% para que el botón ocupe todo el ancho disponible */
+}
+
+
+.campo1, .campo2 {
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+    margin-bottom: 10px; /* Espaciado inferior para separar los campos */
+}
+
+.campo1 input, .campo2 input {
+    width: 100%;
+    padding: 10px; /* Ajusta el relleno según tus necesidades */
+    border: 1px solid #ccc; /* Ajusta el estilo del borde según tus necesidades */
+    border-radius: 10px; /* Radio de esquina para hacerlo redondeado */
+    box-sizing: border-box; /* Asegura que el tamaño total incluya el relleno y el borde */
+}
+
+.campo1 input::placeholder, .campo2 input::placeholder {
+    color: #999; /* Color del texto del marcador de posición */
+}

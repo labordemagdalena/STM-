@@ -1,0 +1,181 @@
+/* Estilos específicos para la página principal */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.maxcontainer {
+    width: 500px; /* Puedes ajustar este valor según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    text-align: center; /* Centra los elementos hijos */
+
+}
+
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+    /*position: fixed;  queda del tamaño que debe pero a la izquierda */
+    top: 0;
+    left: 0;
+    width: auto;
+    background-color: #7B68EE	;
+    color: white;
+    padding: 10px; /*hace que quede finito el bloque */
+    text-align: center;
+    z-index: 1000; /* Asegura que el encabezado esté en la parte superior */
+    align-items: center;
+    
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+}
+
+.menu-toggle {
+    cursor: pointer;
+    margin-right: 10px; /* Espacio entre el botón y el texto */
+}
+
+/* Estilo para los elementos del menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 15px; /* Espacio entre elementos del menú */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+button {
+    background-color: #7B68EE	;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* Agrega un margen superior al cuerpo para evitar que el contenido esté detrás del encabezado */
+body {
+    margin-top: 50px; /* Ajusta según la altura de tu encabezado */
+}
+
+/* Agrega más estilos según sea necesario */
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline-block;
+    margin-right: 20px; /* Espacio entre elementos, ajusta según sea necesario */
+}
+
+#menu a {
+    text-decoration: none; /* Quitar subrayado */
+    color: white; /* Cambiar color a blanco */
+}
+
+/* Cambiar color al pasar el mouse sobre el enlace */
+#menu a:hover {
+    color: #CCCCCC; /* Puedes ajustar el color al pasar el mouse según tus preferencias */
+}
+
+#map-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+    height: 300px; /* Ajusta la altura del mapa según tus necesidades */
+    margin-bottom: 10px;
+}
+
+#directions-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    margin-bottom: 10px;
+}
+
+.campo1, .campo2 {
+    width: auto; /* Ajusta el ancho según tus necesidades */
+    margin-bottom: 10px; /* Espaciado inferior para separar los campos */
+}
+
+.campo1 input, .campo2 input {
+    height: 100%;
+    width: 100%;
+    padding: 10px; /* Ajusta el relleno según tus necesidades */
+    border: 1px solid #ccc; /* Ajusta el estilo del borde según tus necesidades */
+    border-radius: 10px; /* Radio de esquina para hacerlo redondeado */
+    box-sizing: border-box; /* Asegura que el tamaño total incluya el relleno y el borde */
+}
+
+.campo1 input::placeholder, .campo2 input::placeholder {
+    color: #999; /* Color del texto del marcador de posición */
+}
+
+
+.bondi1{
+    display: flex; /*centro lo de adentro*/
+    align-items: center; /*centro lo de adentro*/
+    justify-content: center;/*centro lo de adentro*/
+    margin-top: 20px;
+    background-color: #7B68EE	;
+    width:30%;
+    height: 40px;
+    border: 1px solid #ccc; /* Ajusta el estilo del borde según tus necesidades */
+    border-radius: 10px;
+    color: white;
+}
+
+.fa-bus {
+    color: white;
+}
+
+
+
+
+/* Estilos para pantallas más pequeñas (ej. dispositivos móviles) */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        text-align: left; /* Alinea el texto a la izquierda */
+        padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+        margin-bottom: 50px;
+    }
+
+    .menu-toggle {
+        color:aqua;
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        text-align: center; /* Alinea el texto al centro */
+        display: none; /* Oculta el menú */
+    }
+
+    /* Muestra el menú cuando se hace clic en el botón */
+    .menu-toggle.active + nav ul {
+        display: flex;
+    }
+}
