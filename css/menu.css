@@ -1,0 +1,98 @@
+
+.container{
+
+    background-color: #fff;
+     
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    /* Ajustado el ancho para ser el 90% del contenedor padre */
+    margin: auto;
+    /*justify-content: center;
+    align-items: center;*/
+    height: 400px;
+    display: flex; /*contenedor flexible*/
+    flex-direction: column;
+   
+}
+
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #134B7B;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%; /* Ajustado el ancho al 100% para que el botón ocupe todo el ancho disponible */
+    margin-top: 20px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiado a min-height para asegurar el contenido se ajusta en pantallas pequeñas */
+    background-color:gainsboro ;
+    /*background-color: #D1C4E9 ;*/
+}
+
+/* HASTA ACA LOS BASICOS DEL CONTENEDOR, BODY Y BOTONES Y TITULO EN CASO */
+/*------------------------------------*/
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;
+    flex-direction: row;
+    background-color: #134B7B;
+    color: #fff;
+    border-radius: 3px;
+    margin: 0;
+    padding: 0;
+    height: 120px;
+  }
+
+  .left-column{
+    margin-left: 40px;
+  }
+
+  .right-column{
+    margin-right: 70px;
+  }
+
+.color{
+    width: 400px;
+    height: 10px;
+    background-color:#85A1B2 ;
+    
+}
+  .box{
+    width: 360px;
+    height: 20px;
+    background-color:#134B7B; ;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+  }
+  
+
+  a {
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    color: white; /* Cambia el color del texto a tu preferencia */
+    font-weight: bold; /* Cambia el peso de la fuente si es necesario */
+    transition: color 0.3s ease; /* Agrega una transición suave al color durante 0.3 segundos */
+
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Agrega subrayado al pasar el ratón sobre el enlace */
+    color: #555; /* Cambia el color del texto al pasar el ratón sobre el enlace */
+  }

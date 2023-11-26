@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/475fe1bb8a.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="css/rastreando.css">
+     <script src="js/home.js" defer></script>
+    <title>Bienvenido a STM</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="loading-dots"><i class="fa-solid fa-magnifying-glass-location"></i> Buscando su STM...</h1>
+            <a href="menu.html" id="volver" style="display: none; color:white; margin-left: 30px;"> <i class="fa-solid fa-circle-arrow-left fa-beat-fade"></i> Volver</a>
+
+            
+
+
+        
+    </div>
+
+            <img id="image-container" src="img/1-1 2.jpg" width="300" style="display:none;" >
+            <div id="texto-stm" style=" display:none; margin-left:100px; margin-top:20px; color:#134B7B; font:bold;"> Su STM se encuentra aquí. </div>
+
+    </div>
+
+     <script>
+        // Esperar 5 segundos antes de mostrar la imagen
+        setTimeout(function() {
+            document.getElementById("loading-dots").style.display = "none";
+            document.getElementById("image-container").style.display = "block";
+            document.getElementById("texto-stm").style.display = "block";
+            document.getElementById("volver").style.display = "block";
+
+            
+        }, 5000);
+    </script>
+    
+</body>
+</html>

@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
-    <script src="home.js" defer></script>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js" defer></script>
     <script src="https://kit.fontawesome.com/475fe1bb8a.js" crossorigin="anonymous"></script>
 
     <title>Bienvenido a STM</title>
 </head>
 <body>
+    <div class="super">
     <div class="maxcontainer">
     <div class="header">
         <div class="menu-toggle" onclick="toggleMenu()" style="font-size: 20px;">
             <i class="fa-solid fa-bars"></i>  HOLA! Ve las mejores rutas para tu viaje STM     </div>
         
         <nav id="menu">
-            <!-- Agrega tus elementos de menú aquí -->
+
             <ul>
                 <li><a href="home.html">Inicio</a></li>
                 <li><a href="#">STM digital</a></li>
-                <li><a href="#">Recarga Online</a></li>
-                <li><a href="#">Chip Rastreador</a></li>
+                <li><a href="recarga_online.html">Recarga Online</a></li>
+                <li><a href="chip_rastreador.html">Chip Rastreador</a></li>
                 <li><a href="#">Líneas y frecuencias: Detalles</a></li>
-                <!-- Agrega más elementos según sea necesario -->
+                
             </ul>
         </nav>
     </div>
-    
     
     <div class="container" style="margin-top: 50px;">
         
@@ -50,23 +50,12 @@
         </div>
     </div>
 
-    <div class="bondi1">
+    <!--<div class="bondi1">
         181
         <i class="fa-solid fa-bus"></i>
-    </div>
+    </div>-->
     
 </div>
-
-
-    
-    <!-- Contenido de la página principal -->
-
-    <script>
-        function toggleMenu() {
-            // Muestra u oculta el menú al hacer clic en el botón
-            const menu = document.getElementById("menu");
-            menu.classList.toggle("visible");
-        }
-    </script>
+</div>
 </body>
 </html>

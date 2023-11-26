@@ -1,0 +1,154 @@
+.container{
+
+    background-color: #E9F1F6;
+     
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    /* Ajustado el ancho para ser el 90% del contenedor padre */
+    margin: auto;
+    /*justify-content: center;
+    align-items: center;*/
+    height: 400px;
+    display: flex; /*contenedor flexible*/
+    flex-direction: column;
+   
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiado a min-height para asegurar el contenido se ajusta en pantallas pequeñas */
+    background-color:gainsboro ;
+    /*background-color: #D1C4E9 ;*/
+}
+
+/*-----------------------------------------------*/
+
+.header {
+    display: flex;
+    /*justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;
+    text-align: center;
+    
+    background-color: #134B7B;
+    color: #fff;
+    border-radius: 3px;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  a {
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    color: white; /* Cambia el color del texto a tu preferencia */
+    font-weight: bold; /* Cambia el peso de la fuente si es necesario */
+    transition: color 0.3s ease; /* Agrega una transición suave al color durante 0.3 segundos */
+
+
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Agrega subrayado al pasar el ratón sobre el enlace */
+    color: white; /* Cambia el color del texto al pasar el ratón sobre el enlace */
+  }
+
+  .color{
+    width: 400px;
+    height: 10px;
+    background-color:#85A1B2 ;
+  }
+
+  .boxcodigo{
+    margin-left: 80px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #134B7B;
+    color: white;
+    width: 250px;
+    border-radius: 3px;
+    height: 60px;
+  }
+
+  .rastrear{
+    margin-left: 80px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #134B7B;
+    color: white;
+    width: 250px;
+    border-radius: 3px;
+    height: 22px;
+    margin-bottom: 10px;
+  }
+
+  .codigo{
+    background-color: white;
+    color: #85A1B2;
+    border-radius: 8px;
+    height: 22px;
+    width: 200px;
+    margin-bottom: 10px;
+    height: 30px;
+  }
+  .botonubic{
+    background-color: #134B7B;
+    color: white;
+    border:none;
+    border-radius: 8px;
+    height: 22px;
+    width: 200px;
+    margin-bottom: 10px;
+    height: 40px;
+    margin-left: 80px;
+    width: 250px;
+  }
+
+  .campo1{
+    margin-left: 80px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #134B7B;
+    color: white;
+    width: 250px;
+    border-radius: 3px;
+    height: 70px;
+  }
+
+  .campo1 input, .campo2 input {
+    margin-top: 10px;
+    border: 1px solid #ccc; /* Ajusta el estilo del borde según tus necesidades */
+    border-radius: 10px; /* Radio de esquina para hacerlo redondeado */
+    box-sizing: border-box; /* Asegura que el tamaño total incluya el relleno y el borde */
+    width: 200px;
+    height: 25px;
+}
+
+.campo1 input::placeholder, .campo2 input::placeholder {
+    color: #999; /* Color del texto del marcador de posición */
+}
+
+#map-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#map {
+    height: 100px; /* Ajusta la altura del mapa según tus necesidades */
+    
+    width: 250px;
+    margin-left: 80px;
+}
+

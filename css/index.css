@@ -1,0 +1,47 @@
+
+.container{
+    
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*max-width: 400px; /* Cambiado a un valor máximo para evitar que el contenedor sea demasiado ancho en pantallas grandes */
+    width: 400px; /* Ajustado el ancho para ser el 90% del contenedor padre */
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    display: flex; /*contenedor flexible*/
+    flex-direction: column;
+}
+
+.titulo{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #134B7B;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%; /* Ajustado el ancho al 100% para que el botón ocupe todo el ancho disponible */
+    margin-top: 20px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiado a min-height para asegurar el contenido se ajusta en pantallas pequeñas */
+    background-color:gainsboro ;
+    /*background-color: #D1C4E9 ;*/
+}
+

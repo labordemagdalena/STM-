@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stmdigital.css">
+    <script src="https://kit.fontawesome.com/475fe1bb8a.js" crossorigin="anonymous"></script>
+
+    <title>STM digital</title>
+
+    <div class="container">
+        <div class="header">
+           <a href="menu.html"> <i class="fa-solid fa-angles-left fa-shake"></i> STM digital </a> 
+         </div>
+         
+         <div class="color">
+         </div>
+
+        
+
+         <div class="horas">
+            
+            <div class="textoqr" style="margin-top:10px; margin-bottom:10px; margin-left:140px;">
+                Boleto de 1 hora:
+             </div>
+
+            <div class="horas2">
+                <label for="horaActual" style="margin-left:150px;"> Inicio </label>
+                <input type="text" id="horaActual" readonly>
+        
+                <br>
+        
+                <label for="horaSumada" style="margin-left:150px; " >Fin </label>
+                <input type="text" id="horaSumada" readonly>
+            </div>
+        </div>
+
+         <div class="containerqr">
+            <img src="img/QR-1.jpg" width="200" style="margin-top:20px; margin-left:110px;">
+        </div>
+
+    </div>
+
+   
+
+</head>
+<body>
+    <script>
+    // Obtener la hora actual
+    var horaActual = new Date();
+    
+    // Mostrar la hora actual en el primer campo
+    document.getElementById("horaActual").value = obtenerFormatoHora(horaActual);
+
+    // Sumar 1 hora a la hora actual
+    var horaSumada = new Date(horaActual.getTime() + 60 * 60 * 1000);
+
+    // Mostrar la hora sumada en el segundo campo
+    document.getElementById("horaSumada").value = obtenerFormatoHora(horaSumada);
+
+    // Función para obtener la hora en formato hh:mm:ss
+    function obtenerFormatoHora(fecha) {
+      var horas = fecha.getHours().toString().padStart(2, '0');
+      var minutos = fecha.getMinutes().toString().padStart(2, '0');
+      var segundos = fecha.getSeconds().toString().padStart(2, '0');
+      return horas + ':' + minutos + ':' + segundos;
+    }
+  </script>
+</body>
+</html>

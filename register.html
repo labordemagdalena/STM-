@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/login.js" defer></script>
+    <script src="https://kit.fontawesome.com/475fe1bb8a.js" crossorigin="anonymous"></script>
+    <title>Log In</title>
+</head>
+<body>
+    
+    <div class="container">
+        
+            <form id="registrationForm">
+                <div class="campo1">
+                 
+                <div class="field1">   
+                    <label for="username" style="margin-top:10px;" >Nombre:</label>
+                    <input type="text" id="username" required placeholder="Complete con su nombre de usuario">
+                </div>
+
+                <div class="field1"> 
+                    <label for="apellido" style="margin-top:10px;">Apelllido:</label>
+                    <input type="apellido" id="apellido" required placeholder="Complete con su contraseña: ">
+                </div>
+                
+                <div class="field1"> 
+                    <label for="password">Fecha de nacimiento:</label>
+                    <input type="date" id="fechanac" required pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="Formato: dd/mm/yyyy">
+                </div>
+
+                <div class="prueba">
+                <label for="duracion" style="color:white;">Tiene tarjeta STM</label>
+                <select id="duracion" onchange="mostrarOcultarCampos()" style="margin-left:10px; width:50px; margin: top 10px;">
+                    <option value="1"> </option>
+                    <option value="2"> Sí </option>
+                    <option value="3"> No </option>
+                </select>
+                </div>
+                <br>
+                
+                <div id="campoSTM" style="display: none; color:white;">
+                    <label for="codigoSTM">Código STM:</label>
+                    <input type="text" id="codigoSTM" style="height:10px;" pattern="[A-Za-z]{2}\d{6}" title="Debe ingresar 2 letras seguidas por 6 números.">
+
+                </div>
+                
+                <div id="etiquetaA" style="display: none; color:white;">
+                    <a href="#" style="color:white; margin-top:10px;"> Solicítala aquí</a>
+                </div>
+
+            </div>
+            
+                
+                <a href="register2.html" id="sig" style="margin-top:4px; margin-left:250px; display:none; "> <i class="fa-solid fa-right-long"></i> Siguiente </a>
+            
+            </form>
+        
+    </div>
+
+    <script>
+    function mostrarOcultarCampos() {
+        var duracionSelect = document.getElementById("duracion");
+        var campoSTM = document.getElementById("campoSTM");
+        var etiquetaA = document.getElementById("etiquetaA");
+
+        if (duracionSelect.value == "2") {
+            // Si la opción es 2, mostrar el campo para el código STM
+            campoSTM.style.display = "block";
+            etiquetaA.style.display = "none";
+            sig.style.display="block";
+        } else if (duracionSelect.value == "3") {
+            // Si la opción es 3, mostrar la etiqueta tipo A
+            campoSTM.style.display = "none";
+            etiquetaA.style.display = "block";
+        } else {
+            // En caso contrario, ocultar ambos campos
+            campoSTM.style.display = "none";
+            etiquetaA.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

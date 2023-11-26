@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    background-color:  #D1C4E9;
 
 }
 
@@ -11,50 +12,17 @@ body {
     width: 500px; /* Puedes ajustar este valor según tus necesidades */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
     text-align: center; /* Centra los elementos hijos */
+    border: #7B68EE;
+    background-color: white;
+    height: 700px;
 
 }
 
 
-.header {
-    font-family: 'Montserrat', sans-serif;
-    /*position: fixed;  queda del tamaño que debe pero a la izquierda */
-    top: 0;
-    left: 0;
-    width: auto;
-    background-color: #7B68EE	;
-    color: white;
-    padding: 10px; /*hace que quede finito el bloque */
-    text-align: center;
-    z-index: 1000; /* Asegura que el encabezado esté en la parte superior */
-    align-items: center;
-    
-    display: flex;
-    flex-direction: column; /* Cambia la dirección a columna */
-}
 
-.menu-toggle {
-    cursor: pointer;
-    margin-right: 10px; /* Espacio entre el botón y el texto */
-}
 
-/* Estilo para los elementos del menú */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav li {
-    margin-right: 15px; /* Espacio entre elementos del menú */
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-}
 button {
-    background-color: #7B68EE	;
+    background-color: #9575CD	;
     color: white;
     padding: 5px;
     border: none;
@@ -74,32 +42,11 @@ body {
     margin-top: 50px; /* Ajusta según la altura de tu encabezado */
 }
 
-/* Agrega más estilos según sea necesario */
-
-#menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#menu li {
-    display: inline-block;
-    margin-right: 20px; /* Espacio entre elementos, ajusta según sea necesario */
-}
-
-#menu a {
-    text-decoration: none; /* Quitar subrayado */
-    color: white; /* Cambiar color a blanco */
-}
-
-/* Cambiar color al pasar el mouse sobre el enlace */
-#menu a:hover {
-    color: #CCCCCC; /* Puedes ajustar el color al pasar el mouse según tus preferencias */
-}
 
 #map-container {
     display: flex;
     flex-direction: column;
+    display: none;
 }
 
 #map {
@@ -152,7 +99,70 @@ input, button {
     color: white;
 }
 
+/*HEADER*/
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+}
 
+#menu li {
+    margin-bottom: 10px; /* Espacio entre elementos, ajusta según sea necesario */
+}
+
+#menu a {
+    text-decoration: none; /* Quitar subrayado */
+    color: white; /* Cambiar color a blanco */
+    display: block; /* Asegura que los enlaces ocupen todo el ancho disponible */
+    padding: 5px; /* Agrega un relleno para un aspecto más delgado */
+}
+
+/* Cambiar color al pasar el mouse sobre el enlace */
+#menu a:hover {
+    color: #CCCCCC; /* Puedes ajustar el color al pasar el mouse según tus preferencias */
+}
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    /* Quitar la propiedad display: flex; */
+    /* Quitar la propiedad flex-direction: row; */
+
+    top: 0;
+    left: 0;
+    width: auto;
+    background-color: #7B68EE;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilo para los elementos del menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute; /* Cambiar a posición absoluta */
+    top: 100%; /* Alinear el menú debajo del botón */
+    left: 0;
+    background-color: #7B68EE; /* Igualar el color de fondo */
+}
+
+nav.visible ul {
+    display: flex;
+}
+
+/*------------------------------------------------*/
 
 
 /* Estilos para pantallas más pequeñas (ej. dispositivos móviles) */
@@ -164,9 +174,6 @@ input, button {
         margin-bottom: 50px;
     }
 
-    .menu-toggle {
-        color:aqua;
-    }
 
     nav ul {
         flex-direction: column; /* Cambia la dirección del flexbox a columna */
