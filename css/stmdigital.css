@@ -70,15 +70,32 @@ body {
     color: white;
     border-radius: 4px;
     height: 110px;
+    width: 300px;
+    text-align: center;
+    margin-left: 50px;
   }
 
   #horaActual{
     margin-bottom: 10px;
-    width: 60px;
+    width: 70px;
+    border:none;
+    border-radius: 10px;
+    text-align: center;
   }
   #horaSumada{
     margin-left: 15px;
-    width: 60px;
+    width: 70px;
+    border:none;
+    border-radius: 10px;
+    text-align: center;
   }
-
+.horas3{
+  background-color: #134B7B;
+  color: white;
+  border-radius: 4px;
+  height: 30px;
+  width: 300px;
+  text-align: center;
+  margin-left: 50px;
+}
   

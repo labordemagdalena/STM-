@@ -1,0 +1,124 @@
+
+.container{
+    background-color: #134B7B;
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*max-width: 400px; /* Cambiado a un valor máximo para evitar que el contenedor sea demasiado ancho en pantallas grandes */
+    width: 400px; /* Ajustado el ancho para ser el 90% del contenedor padre */
+    margin: auto;
+    align-items: center;
+    height: 400px;
+    display: flex; /*contenedor flexible*/
+    flex-direction: column;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #134B7B;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 97%; /* Ajustado el ancho al 100% para que el botón ocupe todo el ancho disponible */
+    margin-top: 20px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiado a min-height para asegurar el contenido se ajusta en pantallas pequeñas */
+    background-color:gainsboro ;
+    /*background-color: #D1C4E9 ;*/
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+label, input {
+    
+    
+    margin-bottom: 10px;
+    width: 100%; /* Ajustado el ancho al 100% para que los campos de entrada ocupen todo el ancho disponible */
+    
+}
+
+#username, #password{
+    margin-top: 10px;
+    width: 370px;
+}
+
+.campo1{
+    margin-left: 10px;
+}
+
+
+
+
+.campo1 input, .campo2 input {
+    width:100%;
+    padding: 10px; /* Ajusta el relleno según tus necesidades */
+    border: 1px solid #ccc; /* Ajusta el estilo del borde según tus necesidades */
+    border-radius: 10px; /* Radio de esquina para hacerlo redondeado */
+    box-sizing: border-box; /* Asegura que el tamaño total incluya el relleno y el borde */
+    margin-left: 5px;
+    margin-top: 10px;
+} 
+
+.campo1 input::placeholder, .campo2 input::placeholder {
+    color: #999; /* Color del texto del marcador de posición */
+    
+}
+
+
+a {
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    color: white; /* Cambia el color del texto a tu preferencia */
+    font-weight: bold; /* Cambia el peso de la fuente si es necesario */
+    transition: color 0.3s ease; /* Agrega una transición suave al color durante 0.3 segundos */
+
+
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Agrega subrayado al pasar el ratón sobre el enlace */
+    color: #555; /* Cambia el color del texto al pasar el ratón sobre el enlace */
+  }
+
+  .field1{
+    background-color: #134B7B;
+    color: white;
+    margin-top: 30px;
+    border-radius: 3px;
+   
+  }
+
+  button {
+    background-color: white	;
+    color: #134B7B;
+    
+    border: none;
+    cursor: pointer;
+}
+
+.pruebare{
+    margin-top: 90px;
+    width:200px;
+    height: 200px;
+    background-color: white;
+    color:#134B7B;
+    border-radius: 5px;
+}

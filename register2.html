@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/register2.css">
     
     <script src="https://kit.fontawesome.com/475fe1bb8a.js" crossorigin="anonymous"></script>
-    <title>Log In</title>
+    <title>Registro </title>
 </head>
 <body>
     
     <div class="container">
-        
+
             <form id="registrationForm">
+
                 <div class="campo1">
                  
                 <div class="campo2">
-                <div class="field1">  
-                    <label for="username" style="margin-top:10px;" > Número de tarjeta :</label>
+                    
+                <div class="field1"> 
+                    <div class="pruebase" style=" margin-bottom:10px; color:white;">Le pedimos un método de pago para poder realizar la compra de boletos online.
+                    </div> 
+                    <label for="username" > Número de tarjeta :</label>
                     <input type="text" id="username">
                 </div>
 
@@ -32,9 +36,9 @@
                 </div>
                 
                 <div class="button2"> 
-                    <a href="register.html" id="sig" style="margin-top:4px; background-color:white; color: #134B7B;"> <i class="fa-solid fa-right-long"></i> Guardar tarjeta </a>
+                    <!--<a href="register.html" id="sig" style="margin-top:4px; background-color:white; color: #134B7B;"> <i class="fa-solid fa-right-long"></i> Guardar tarjeta </a>-->
                 </div>
-                <button type="submit" onclick="redirigir()"> <i class="fa-solid fa-arrow-right"></i> Guardar tarjeta </button>
+                <button type="button" onclick="redirigir()"> <i class="fa-solid fa-arrow-right"></i> Guardar tarjeta </button>
 
                <!-- <button type="submit"> <i class="fa-solid fa-arrow-right"></i>  Guardar tarjeta </button>-->
             </div>
@@ -56,7 +60,7 @@
             // Redirige a register3.html después de 2 segundos
             setTimeout(function () {
                 window.location.href = 'register3.html';
-            }, 2000);
+            }, 1000 );
         }
     </script>
 

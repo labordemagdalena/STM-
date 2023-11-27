@@ -20,23 +20,27 @@
 
          <div class="horas">
             
-            <div class="textoqr" style="margin-top:10px; margin-bottom:10px; margin-left:140px;">
+            <div class="textoqr" style="margin-top:10px; margin-bottom:10px; margin-left:0px;">
                 Boleto de 1 hora:
              </div>
 
             <div class="horas2">
-                <label for="horaActual" style="margin-left:150px;"> Inicio </label>
+                <label for="horaActual" style="margin-left:0px;"> Inicio </label>
                 <input type="text" id="horaActual" readonly>
         
                 <br>
         
-                <label for="horaSumada" style="margin-left:150px; " >Fin </label>
+                <label for="horaSumada" style="margin-left:0px; " >Fin </label>
                 <input type="text" id="horaSumada" readonly>
             </div>
         </div>
 
-         <div class="containerqr">
-            <img src="img/QR-1.jpg" width="200" style="margin-top:20px; margin-left:110px;">
+       <div class="hola" style="margin-left:100px; color: #134B7B;"><span id="cargando">Generando código QR...</span></div>
+         <div class="containerqr" id="containerqr" style="display: none;">
+            <img src="img/QR-1.jpg" width="180" style="margin-top:10px; margin-left:110px;">
+        </div>
+        <div class="horas3">
+         <a href="">Ver historial de viaje </a> 
         </div>
 
     </div>
@@ -46,6 +50,23 @@
 </head>
 <body>
     <script>
+      // Función para alternar la visibilidad de los tres puntos
+      var interval = setInterval(function() {
+            var cargandoSpan = document.getElementById("cargando");
+
+            // Alternar entre mostrar y ocultar los tres puntos
+            cargandoSpan.style.visibility = (cargandoSpan.style.visibility === "hidden") ? "visible" : "hidden";
+        }, 500); // Cambia la duración del intervalo según tu preferencia (en milisegundos)
+
+      setTimeout(function() {
+            var containerqr = document.getElementById("containerqr");
+            var cargandoSpan = document.getElementById("cargando");
+            
+            // Cambia el contenido del elemento de texto a la imagen
+            cargandoSpan.textContent = "";
+            containerqr.style.display = "block";
+        }, 4000);
+
     // Obtener la hora actual
     var horaActual = new Date();
     

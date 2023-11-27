@@ -7,7 +7,7 @@
 
     <script src="https://kit.fontawesome.com/475fe1bb8a.js" crossorigin="anonymous"></script>
 
-    <title>Bienvenido a STM</title>
+    <title>Recarga Online</title>
 </head>
 <body>
     <div class="container">
@@ -29,21 +29,47 @@
             <div class="compra">
                 <div class="compratexto" style="margin-top:10px;margin-left:15px;">
                 <label for="duracion">Comprar boleto de:</label>
-                    <select id="duracion">
+                    <select id="duracion" onchange="actualizarPrecio()">
+                    <option value="0"> </option>
                     <option value="1">1 hora</option>
                     <option value="2">2 horas</option>
                     </select>
                     <br><br>
-                    El codigo QR generado para su boleto se mostrará en STM digital.
+                    
+                    Precio: <span id="precio"> </span> 
+                    <div style="margin-top:10px;">El codigo QR se mostrará en STM digital.</div>
                 </div>
          </div>
+         
          <div class="pagar">
-            <div class="prueba" style="margin-top:10px;">
-            <a href="stmdigital.html" class="textopagar" style="margin-top:20px; margin-left:100px;"> Pagar </a>
-        </div> 
+            
+            <div class="prueba" style="margin-top:10px;"> 
+
+            <a href="stmdigital.html" class="textopagar" style="margin-top:20px; margin-left:100px;"> Pagar</a>
+            </div> 
             </div>
             
          </div>
     </div>
+
+
+    <script>
+        function actualizarPrecio() {
+            // Obtener el elemento select
+            var duracionSelect = document.getElementById("duracion");
+            
+            // Obtener el valor seleccionado
+            var duracionSeleccionada = duracionSelect.options[duracionSelect.selectedIndex].value;
+            
+            // Actualizar el precio según la duración seleccionada
+            var precio = (duracionSeleccionada === "1") ? "$ UYU 42" : (duracionSeleccionada === "2") ? "$ UYU 62" : 0;
+
+            // Obtener el elemento span que contiene el precio
+            var precioSpan = document.getElementById("precio");
+
+            // Actualizar el contenido del span con el nuevo precio
+            precioSpan.textContent = precio;
+        }
+    </script>
 </body>
 </html>
